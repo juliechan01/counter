@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counter Assignment</title>
+        <link rel="stylesheet" href="">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="counter assignment">
+    </head>
+
+    <body align = center>
+        <h1>Julie's Counter Assignment</h1>
+        <h3>This site has been visited: {{session["num"]}} time(s).</h3>
+        <form action="/another_route" method="POST">
+            <input type="submit" value="+2 Visits" style="border: 1px solid black; border-radius: 5px; background-color: lightblue; color: gray; padding: 5px; margin-bottom: 10px; text-decoration: none;">
+        </form>
+        <form action="/add" method="POST">
+            <h3>How many visits would you like to add?</h3>
+            <input type="number" name="AddVisits" style="margin-bottom: 20px;">
+            <input type="submit" value="Add Visits">
+        </form>
+        <a href="/destroy_session" style="border: 1px solid black; border-radius: 5px; background-color: darkred; color: white; padding: 5px; text-decoration: none;">Reset</a>
+    </body>
+</html>
